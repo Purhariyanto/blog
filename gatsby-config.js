@@ -13,12 +13,12 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-next-seo`,
-    {
-      resolve: `gatsby-plugin-google-adsense`,
-      options: {
-        publisherId: `ca-pub-5738026098468973`
-      }
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-adsense`,
+    //   options: {
+    //     publisherId: `ca-pub-5738026098468973`
+    //   }
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

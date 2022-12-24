@@ -121,7 +121,7 @@ export const pageQuery = graphql`
           description
           img {
             childImageSharp {
-              gatsbyImageData(width: 600, placeholder: BLURRED, formats: WEBP)
+              gatsbyImageData(width: 300, placeholder: BLURRED, formats: [AUTO,WEBP])
             }
           }
           tags

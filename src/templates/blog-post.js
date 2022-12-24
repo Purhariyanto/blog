@@ -88,7 +88,7 @@ const BlogPostTemplate = ({
         {previous && (
           <div className="flex-1">
             <div className="inline-block text-base font-bold">
-              ←{" "}
+            <span className="items-center text-[2em]">← </span>
               <Link to={previous.fields.slug} rel="prev">
                 {previous.frontmatter.title}
               </Link>
@@ -100,8 +100,8 @@ const BlogPostTemplate = ({
             <div className="inline-block text-base font-bold float-right">
               <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title}
-              </Link>{" "}
-              →
+              </Link>
+              <span className="items-center text-[2em]"> →</span>
             </div>
           </div>
         )}
@@ -174,7 +174,7 @@ export const pageQuery = graphql`
           title
           img {
             childImageSharp {
-              gatsbyImageData(width: 600, placeholder: BLURRED, formats: WEBP)
+              gatsbyImageData(width: 300, placeholder: BLURRED, formats: [AUTO,WEBP])
             }
           }
         }

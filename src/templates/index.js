@@ -41,8 +41,9 @@ const BlogIndex = ({ data, location, pageContext }) => {
       />
 
       {posts.map(post => {
-        const { title, date, img } = post.frontmatter
+        const { title, date, img, tags } = post.frontmatter
         const image = img.childImageSharp.gatsbyImageData
+        if (tags === "page") return null
         return (
           <section
             className="bg-white"
@@ -76,7 +77,10 @@ const BlogIndex = ({ data, location, pageContext }) => {
                       {post.excerpt}
                     </span>
 
-                    <span className="text-sm text-gray-500"> <time>{date}</time></span>
+                    <span className="text-sm text-gray-500">
+                      {" "}
+                      <time>{date}</time>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -88,8 +92,8 @@ const BlogIndex = ({ data, location, pageContext }) => {
         {!isFirst && (
           <div className="flex-1">
             <Link to={prevPage} rel="prev">
-              <div className="inline-block shadow-lg text-white px-4 py-2 bg-blue-600 rounded-xl text-base font-bold hover:bg-yellow-600">
-                ← Previous
+              <div className="shadow-lg text-white px-4 py-2 bg-blue-600 rounded-xl text-base font-bold hover:bg-yellow-600">
+              <span className="items-center text-[2em]">← </span> Previous
               </div>
             </Link>
           </div>
@@ -97,8 +101,8 @@ const BlogIndex = ({ data, location, pageContext }) => {
         {!isLast && (
           <div className="flex-1">
             <Link to={nextPage} rel="next">
-              <div className="inline-block shadow-lg text-white px-4 py-2 bg-blue-600 rounded-xl text-base font-bold hover:bg-yellow-600 float-right">
-                Next →
+              <div className="shadow-lg text-white px-4 py-2 bg-blue-600 rounded-xl text-base font-bold hover:bg-yellow-600 float-right">
+                Next <span className="items-center text-[2em]"> →</span>
               </div>
             </Link>
           </div>
@@ -137,7 +141,11 @@ export const pageQuery = graphql`
           description
           img {
             childImageSharp {
-              gatsbyImageData(width: 600, placeholder: BLURRED, formats: WEBP)
+              gatsbyImageData(
+                width: 300
+                placeholder: BLURRED
+                formats: [AUTO, WEBP]
+              )
             }
           }
           tags

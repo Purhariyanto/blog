@@ -97,7 +97,7 @@ exports.onCreateNode = async ({
 }) => {
   const { createNodeField } = actions
 
-  if (node.internal.type === `MarkdownRemark`) {
+  if (node.internal.type === `MarkdownRemark` && (node.frontmatter.img !== null)) {
     const value = createFilePath({ node, getNode })
 
     createNodeField({

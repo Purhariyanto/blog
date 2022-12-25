@@ -13,10 +13,15 @@ module.exports = {
     `gatsby-plugin-postcss`,
     `gatsby-plugin-next-seo`,
     {
-      resolve: `gatsby-plugin-advanced-sitemap`,
+      resolve: 'gatsby-plugin-sitemap',
       options: {
-        exclude: [/(\/)?page\/\S*/, /(\/)?404\S*/, /(\/)?p\/\S*/],
-        createLinkInHead: true,
+        output: '/',
+        excludes: [
+          `/404/`,
+          `/404*`,
+          `/page/*`,
+          `/p/*`,
+        ],
       },
     },
     {
@@ -37,8 +42,13 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          `gatsby-remark-autolink-headers`,
           `gatsby-remark-external-links`,
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              isIconAfterHeader: true
+            },
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {

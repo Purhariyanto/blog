@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
-const Menu = ({ menuBot }) => {
+const Menu = () => {
   const menuBot = [
     {
       name: `Disclaimer`,

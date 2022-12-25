@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import MenuTop from "./menuTop"
-// import MenuBot from "./menuBot"
+import MenuBot from "./menuBot"
 import Adsense from "./adsense"
 
 const Layout = ({ location, title, des, children, menuTop, menuBot }) => {
@@ -42,7 +42,7 @@ const Layout = ({ location, title, des, children, menuTop, menuBot }) => {
       <Adsense />
       <header className="pt-4">{header}</header>
       <main>{children}</main>
-      {/* <MenuBot menuBot={menuBot} /> */}
+      <MenuBot />
       <hr className="mt-5 mx-auto w-48 h-1 bg-gray-100 rounded border-0" />
       <footer className="p-3">
         <div className="w-full text-center text-base text-gray-700">

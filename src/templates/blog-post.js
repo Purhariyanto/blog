@@ -31,7 +31,7 @@ const BlogPostTemplate = ({
           description: post.frontmatter.description,
           images: [
             {
-              url: post.frontmatter.img.childImageSharp.gatsbyImageData.images.fallback.src,
+              url: siteUrl+post.frontmatter.img.childImageSharp.gatsbyImageData.images.fallback.src,
               width: 500,
               height: 500,
               alt: "WapPur",
@@ -46,7 +46,7 @@ const BlogPostTemplate = ({
         title={post.frontmatter.title}
         keywords={post.frontmatter.title}
         images={
-          post.frontmatter.img.childImageSharp.gatsbyImageData.images.fallback.src
+          siteUrl+post.frontmatter.img.childImageSharp.gatsbyImageData.images.fallback.src
         }
         datePublished={post.frontmatter.date}
         dateModified={post.frontmatter.date}
@@ -192,7 +192,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
-        date(formatString: "DD MMMM YYYY")
+        date(formatString: "DD-MM-YYYY")
         description
         img {
           childImageSharp {

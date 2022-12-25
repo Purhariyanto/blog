@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import MenuTop from "./menuTop"
 import MenuBot from "./menuBot"
-import Adsense from "./adsense"
+// import Adsense from "./adsense"
 
 const Layout = ({ location, title, des, children, menuTop, menuBot }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -39,7 +39,7 @@ const Layout = ({ location, title, des, children, menuTop, menuBot }) => {
       className="max-w-2xl mx-auto bg-white shadow-sm"
       data-is-root-path={isRootPath}
     >
-      <Adsense />
+      {/* <Adsense /> */}
       <header className="pt-4">{header}</header>
       <main>{children}</main>
       <MenuBot />

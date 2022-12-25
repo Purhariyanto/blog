@@ -1,12 +1,13 @@
 import React, { useEffect } from "react"
 
-const AdsBot = props => {
+const AdsBot = () => {
   useEffect(() => {
-    try {
-      const adsbygoogle = window.adsbygoogle || []
-      adsbygoogle.push({})
-    } catch (e) {
-      console.error(e)
+    if (window) {
+      try {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (error) {
+        console.log(error, "adsenese error");
+      }
     }
   }, [])
 

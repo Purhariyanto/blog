@@ -1,17 +1,25 @@
 import React, { useEffect } from "react"
-import AdSense from 'react-adsense'
 
 const AdsTop = () => {
+  useEffect(() => {
+    if (window) {
+      try {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (error) {
+        console.log(error, "adsenese error");
+      }
+    }
+  }, [])
 
   return (
     <div className="min-w-full mx-auto">
-      <AdSense.Google
-          className="adsbygoogle block"
-          data-ad-client="ca-pub-5738026098468973"
-          data-ad-slot="6209592731"
-          data-ad-format="auto"
-          data-full-width-responsive="true"
-      />
+      <ins
+        className="adsbygoogle block"
+        data-ad-client="ca-pub-5738026098468973"
+        data-ad-slot="6209592731"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
     </div>
   )
 }

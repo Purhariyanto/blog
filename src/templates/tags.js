@@ -14,7 +14,7 @@ const BlogIndex = ({ data, location, pageContext }) => {
   const menuBot = data.site.siteMetadata?.menuBot
   const { tag } = pageContext
   const tagUrl = (siteUrl + "tags/" + tag + "/").toLowerCase()
-  const tags = tag + " | " + siteTitle
+  const tags = "Tutorial " + tag
   const des =
     "Selamat datang di halaman kategori " +
     tag +
@@ -50,6 +50,7 @@ const BlogIndex = ({ data, location, pageContext }) => {
           site_name: { author },
         }}
       />
+      <h1 className="mx-4 text-2xl -mb-1">{tags}</h1>
       {posts.map(post => {
         const { title, date, img } = post.frontmatter
         const image = img.childImageSharp.gatsbyImageData

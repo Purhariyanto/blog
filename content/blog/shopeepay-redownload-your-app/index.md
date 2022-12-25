@@ -14,9 +14,31 @@ ShopeePay adalah fitur layanan dompet digital berfungsi sebagai alat pembayaran 
 
 Membayar dengan ShopeePay di aplikasi ataupun di web Shopee memberikan banyak keuntungan bagi pengguna. diantaranya seperti gratis ongkir, biaya admin atau fee gratis, serta diskon dan promo lainnya. langsung saja berikut langkah-langkahnya.
 
-## Tutorial
+## Penyebab Shopee Error
 
-1. Pastikan aplikasi Shopee sudah terinstall dan sudah update yang terbaru. Jika menggunakan versi yang lama maka akan gagal seperti sebelumnya.
+Setiap masalah pasti ada penyebabnya, ya ini juga termasuk salah satunya. Waktu membuka Shopeepay di aplikasi Shopee muncul pesan Redownload Your App. Ada 2 penyebab yang sudah saya buktikan:
+
+*   Aplikasi Shopee belum di **Update** ke versi yang terbaru. Karna itu Anda perlu mengupdate terlebih dahulu.
+
+    ### Bagaimana cara update aplikasi Shopee?
+    
+    Tenang caranya cukup mudah, hanya perlu 3 tahap saja
+
+    *   Pertama masuk ke **Playstore**.
+
+    *   Di kolom pencarian ketik **Shopee**.
+
+    *   kemudian pilih Shopee dan klik **Update**.
+
+    *   Jika dengan cara ini tidak bisa, silakan ikuti cara yang kedua dibawah.
+
+*   Hp / Android Anda sudah di **Root**. Aplikasi Shopee mendeteksi bahwa hp anda sudah di root. ini adalah hal wajar karna ini salah satu untuk menjaga keamanan aplikasi dan tidak hanya shopee saja. Aplikasi bank dan lainnya juga ada yang memakai opsi ini untuk keamanan.
+
+## Cara Mengatasi Shopee Error
+
+Aplikasi Shopee sudah di update tapi masih error? tentang masih ada cara yang kedua. Ini sudah saya buktikan sendiri dengan hp saya sudah di root dan 100% berhasil tidak muncul error lagi.
+
+1. Pastikan aplikasi Shopee sudah terinstall dan sudah update yang terbaru. Jika menggunakan versi yang lama maka akan gagal seperti sebelumnya. Pastikan juga Anda punya kuota internet yang cukup.
 
 2. Download dan install aplikasi yang bernama **F1 VM** di web official **https://f1vm.com**. Selama saya mengunakan aplikasi ini gratis dan nyaman tidak ada iklan.
 
@@ -46,24 +68,6 @@ Membayar dengan ShopeePay di aplikasi ataupun di web Shopee memberikan banyak 
 
     ![ShopeePay Redownload Your App](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgmgPtZj3lhbMq3op1LbY6MuPTY58uaqGsakrO9fRAadbXqGvnnKWeTXXpqU_mFlS1a8jYVeXj6Cn_lMzIWJhFcTkO_XQ_Gpk3NpPLEI8HFQgI6YEfqC0L8Bg6wE8e4y8NRw7C8hKKJUjqXvQLc1n64n0Vsx0Tj28S1EzJULXTJALFUwvychkQbcOnZLQ/w180-h320/Screenshot_2022-08-08-11-40-41-039_com.f1player.play.jpg)
 
-## Penyebab
-
-Setiap masalah pasti ada penyebabnya, ya ini juga termasuk salah satunya. Waktu membuka Shopeepay di aplikasi Shopee muncul pesan Redownload Your App. Ada 2 penyebab yang saya buktikan:
-
-*   Aplikasi Shopee belum di **Update** ke versi yang terbaru. Karna itu Anda perlu mengupdate terlebih dahulu.
-
-    ### Bagaimana cara update aplikasi Shopee?
-    
-    Tenang caranya cukup mudah, hanya perlu 3 tahap saja
-
-    *   Pertama masuk ke **Playstore**
-
-    *   Di kolom pencarian ketik **Shopee**
-
-    *   kemudian pilih Shopee dan klik **Update**
-
-*   Hp / Android Anda sudah di **Root**. Aplikasi Shopee mendeteksi bahwa hp anda sudah di root. ini adalah hal wajar karna ini salah satu untuk menjaga keamanan aplikasi dan tidak hanya shopee saja. Aplikasi bank dan lainnya juga ada yang memakai opsi ini untuk opsi keamanan.
-
 ## Penutup
 
-Demikian tutorial mengatasi ShopeePay redownload your app di Android. Semoga bermanfaat dan sampai jumpa di postingan selanjutnya.
+Demikian cara mengatasi ShopeePay redownload your app di Android. Semoga bermanfaat dan sampai jumpa di postingan selanjutnya.

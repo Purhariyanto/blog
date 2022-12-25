@@ -10,16 +10,17 @@ const BlogIndex = ({ data, location, pageContext }) => {
   const siteUrl = data.site.siteMetadata?.siteUrl
   const author = data.site.siteMetadata?.author
   const imgLogo = data.site.siteMetadata?.imgLogo
+  const menuTop = data.site.siteMetadata?.menuTop
+  const menuBot = data.site.siteMetadata?.menuBot
   const { currentPage, numPage } = pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numPage
-  const prevPage =
-    currentPage - 1 === 1 ? "/" : "/p/" + (currentPage - 1).toString()
+  const prevPage = currentPage - 1 === 1 ? "/" : "/p/" + (currentPage - 1).toString()
   const nextPage = "/p/" + (currentPage + 1).toString()
   const posts = data.allMarkdownRemark.nodes
 
   return (
-    <Layout location={location} title={siteTitle} des={siteDes}>
+    <Layout location={location} title={siteTitle} des={siteDes} menuTop={menuTop} menuBot={menuBot}>
       <GatsbySeo
         title={siteTitle}
         description={siteDes}
@@ -43,7 +44,7 @@ const BlogIndex = ({ data, location, pageContext }) => {
       {posts.map(post => {
         const { title, date, img, tags } = post.frontmatter
         const image = img.childImageSharp.gatsbyImageData
-        if (tags === "page") return null
+        if (JSON.stringify(tags) === JSON.stringify(['Page'])) return null
         return (
           <section
             className="bg-white"
@@ -92,7 +93,7 @@ const BlogIndex = ({ data, location, pageContext }) => {
         {!isFirst && (
           <div className="flex-1">
             <Link to={prevPage} rel="prev">
-              <div className="shadow-lg text-white px-4 py-2 bg-blue-600 rounded-xl text-base font-bold hover:bg-yellow-600">
+              <div className="inline-block shadow-lg text-white px-4 py-2 bg-blue-600 rounded-xl text-base font-bold hover:bg-yellow-600">
               <span className="items-center text-[2em]">← </span> Previous
               </div>
             </Link>
@@ -144,7 +145,7 @@ export const pageQuery = graphql`
               gatsbyImageData(
                 width: 300
                 placeholder: BLURRED
-                formats: [AUTO, WEBP]
+                formats: AUTO
               )
             }
           }

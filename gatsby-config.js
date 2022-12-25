@@ -1,4 +1,3 @@
-
 module.exports = {
   siteMetadata: {
     title: `WapPur`,
@@ -13,7 +12,13 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-next-seo`,
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-advanced-sitemap`,
+      options: {
+        exclude: [/(\/)?page\/\S*/, /(\/)?404\S*/, /(\/)?p\/\S*/],
+        createLinkInHead: true,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -37,7 +42,8 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 600,
+              maxWidth: 450,
+              linkImagesToOriginal: false
             },
           },
           {
@@ -106,11 +112,8 @@ module.exports = {
         short_name: `WapPur`,
         start_url: `/`,
         background_color: `#ffffff`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/gatsby-icon.png`,
       },
     },
   ],

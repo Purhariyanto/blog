@@ -1,9 +1,10 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import Menu from "./menu"
+import MenuTop from "./menuTop"
+// import MenuBot from "./menuBot"
 import Adsense from "./adsense"
 
-const Layout = ({ location, title, des, children }) => {
+const Layout = ({ location, title, des, children, menuTop, menuBot }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   let header
@@ -15,7 +16,7 @@ const Layout = ({ location, title, des, children }) => {
           <div className="text-sm text-gray-600 m-4">{des}</div>
           <hr className="my-4 mx-auto w-48 h-1 bg-gray-100 rounded border-0" />
         </div>
-        <Menu />
+        <MenuTop />
       </>
     ) 
   } else {
@@ -28,7 +29,7 @@ const Layout = ({ location, title, des, children }) => {
           <div className="text-sm text-gray-600 m-4">{des}</div>
           <hr className="my-4 mx-auto w-48 h-1 bg-gray-100 rounded border-0" />
         </div>
-        <Menu />
+        <MenuTop />
       </>
     )
   }
@@ -41,6 +42,7 @@ const Layout = ({ location, title, des, children }) => {
       <Adsense />
       <header className="pt-4">{header}</header>
       <main>{children}</main>
+      {/* <MenuBot menuBot={menuBot} /> */}
       <hr className="mt-5 mx-auto w-48 h-1 bg-gray-100 rounded border-0" />
       <footer className="p-3">
         <div className="w-full text-center text-base text-gray-700">

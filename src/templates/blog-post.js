@@ -14,11 +14,13 @@ const BlogPostTemplate = ({
   const siteUrl = site.siteMetadata?.siteUrl
   const author = site.siteMetadata?.author
   const imgLogo = site.siteMetadata?.imgLogo
+  const menuTop = site.siteMetadata?.menuTop
+  const menuBot = site.siteMetadata?.menuBot
   const posts = p.nodes
   const url = siteUrl + post.fields.slug
-
+  
   return (
-    <Layout location={location} title={siteTitle} des={siteDes}>
+    <Layout location={location} title={siteTitle} des={siteDes} menuTop={menuTop} menuBot={menuBot}>
       <GatsbySeo
         title={post.frontmatter.title}
         description={post.frontmatter.description}
@@ -29,8 +31,7 @@ const BlogPostTemplate = ({
           description: post.frontmatter.description,
           images: [
             {
-              url: post.frontmatter.img.childImageSharp.gatsbyImageData.images
-                .fallback.src,
+              url: post.frontmatter.img.childImageSharp.gatsbyImageData.images.fallback.src,
               width: 500,
               height: 500,
               alt: "WapPur",
@@ -45,8 +46,7 @@ const BlogPostTemplate = ({
         title={post.frontmatter.title}
         keywords={post.frontmatter.title}
         images={
-          post.frontmatter.img.childImageSharp.gatsbyImageData.images.fallback
-            .src
+          post.frontmatter.img.childImageSharp.gatsbyImageData.images.fallback.src
         }
         datePublished={post.frontmatter.date}
         dateModified={post.frontmatter.date}
@@ -84,8 +84,10 @@ const BlogPostTemplate = ({
       </article>
       <AdsBot />
       <hr />
+      
       <div className="flex flex-row p-3 my-2 rounded-xl">
-        {previous && (
+        {
+          previous && !previous.fields.slug.match(/(\/)?page\/\S*/) && (
           <div className="flex-1">
             <div className="inline-block text-base font-bold">
             <span className="items-center text-[2em]">← </span>
@@ -95,7 +97,7 @@ const BlogPostTemplate = ({
             </div>
           </div>
         )}
-        {next && (
+        {next && !next.fields.slug.match(/(\/)?page\/\S*/) && (
           <div className="flex-1">
             <div className="inline-block text-base font-bold float-right">
               <Link to={next.fields.slug} rel="next">
@@ -174,7 +176,7 @@ export const pageQuery = graphql`
           title
           img {
             childImageSharp {
-              gatsbyImageData(width: 300, placeholder: BLURRED, formats: [AUTO,WEBP])
+              gatsbyImageData(width: 300, placeholder: BLURRED, formats: AUTO)
             }
           }
         }
@@ -194,7 +196,7 @@ export const pageQuery = graphql`
         description
         img {
           childImageSharp {
-            gatsbyImageData(width: 600, placeholder: BLURRED, formats: WEBP)
+            gatsbyImageData(width: 600, placeholder: BLURRED, formats: AUTO)
           }
         }
       }

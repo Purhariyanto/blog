@@ -10,6 +10,8 @@ const BlogIndex = ({ data, location, pageContext }) => {
   const siteUrl = data.site.siteMetadata?.siteUrl
   const author = data.site.siteMetadata?.author
   const imgLogo = data.site.siteMetadata?.imgLogo
+  const menuTop = data.site.siteMetadata?.menuTop
+  const menuBot = data.site.siteMetadata?.menuBot
   const { tag } = pageContext
   const tagUrl = (siteUrl + "tags/" + tag + "/").toLowerCase()
   const tags = tag + " | " + siteTitle
@@ -22,7 +24,7 @@ const BlogIndex = ({ data, location, pageContext }) => {
   const posts = data.allMarkdownRemark.nodes
 
   return (
-    <Layout location={location} title={siteTitle} des={siteDes}>
+    <Layout location={location} title={siteTitle} des={siteDes} menuTop={menuTop} menuBot={menuBot}>
       <GatsbySeo
         title={tags}
         description={des}
@@ -121,7 +123,7 @@ export const pageQuery = graphql`
           description
           img {
             childImageSharp {
-              gatsbyImageData(width: 300, placeholder: BLURRED, formats: [AUTO,WEBP])
+              gatsbyImageData(width: 300, placeholder: BLURRED, formats: AUTO)
             }
           }
           tags

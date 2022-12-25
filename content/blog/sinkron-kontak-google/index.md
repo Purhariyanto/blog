@@ -8,7 +8,7 @@ tags: [Tutorial]
 
 Kontak Google adalah alternatif yang bagus untuk Kontak iCloud untuk menyinkronkan kontak antara iPhone atau iPhone dan Android. Namun, Anda mungkin akan bingung jika menggunakan keduanya di iPhone. Anda dapat menghapus Google Kontak dari iPhone Anda jika Anda ingin menyelaraskannya hanya dengan akun iCloud Anda.
 
-[Kontak Google](./1.png)
+![Kontak Google](./1.png)
 
 Ada beberapa cara untuk menghapus Google Kontak dari iPhone. Untuk memulai, Anda perlu mematikan sinkronisasi untuk Google Kontak di Pengaturan. Itu akan menghentikan sinkronisasi kontak dari Google Kontak ke iPhone, dan jika Anda telah memilih Google Kontak sebagai lokasi penyimpanan kontak default, itu akan diubah ke iCloud.
 

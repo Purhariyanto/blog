@@ -15,12 +15,19 @@ const BlogIndex = ({ data, location, pageContext }) => {
   const { currentPage, numPage } = pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numPage
-  const prevPage = currentPage - 1 === 1 ? "/" : "/p/" + (currentPage - 1).toString()
+  const prevPage =
+    currentPage - 1 === 1 ? "/" : "/p/" + (currentPage - 1).toString()
   const nextPage = "/p/" + (currentPage + 1).toString()
   const posts = data.allMarkdownRemark.nodes
 
   return (
-    <Layout location={location} title={siteTitle} des={siteDes} menuTop={menuTop} menuBot={menuBot}>
+    <Layout
+      location={location}
+      title={siteTitle}
+      des={siteDes}
+      menuTop={menuTop}
+      menuBot={menuBot}
+    >
       <GatsbySeo
         title={siteTitle}
         description={siteDes}
@@ -44,7 +51,7 @@ const BlogIndex = ({ data, location, pageContext }) => {
       {posts.map(post => {
         const { title, date, img, tags } = post.frontmatter
         const image = img.childImageSharp.gatsbyImageData
-        if (JSON.stringify(tags) === JSON.stringify(['Page'])) return null
+        if (JSON.stringify(tags) === JSON.stringify(["Page"])) return null
         return (
           <section
             className="bg-white"
@@ -94,7 +101,7 @@ const BlogIndex = ({ data, location, pageContext }) => {
           <div className="flex-1">
             <Link to={prevPage} rel="prev">
               <div className="inline-block shadow-lg text-white px-4 py-2 bg-blue-600 rounded-xl text-base font-bold hover:bg-yellow-600">
-              <span className="items-center text-[2em]">← </span> Previous
+                <span className="items-center text-[2em]">← </span> Previous
               </div>
             </Link>
           </div>
@@ -142,11 +149,7 @@ export const pageQuery = graphql`
           description
           img {
             childImageSharp {
-              gatsbyImageData(
-                width: 300
-                placeholder: BLURRED
-                formats: AUTO
-              )
+              gatsbyImageData(width: 300, placeholder: BLURRED, formats: AUTO)
             }
           }
           tags

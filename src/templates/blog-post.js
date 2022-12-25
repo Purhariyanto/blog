@@ -18,9 +18,15 @@ const BlogPostTemplate = ({
   const menuBot = site.siteMetadata?.menuBot
   const posts = p.nodes
   const url = siteUrl + post.fields.slug
-  
+
   return (
-    <Layout location={location} title={siteTitle} des={siteDes} menuTop={menuTop} menuBot={menuBot}>
+    <Layout
+      location={location}
+      title={siteTitle}
+      des={siteDes}
+      menuTop={menuTop}
+      menuBot={menuBot}
+    >
       <GatsbySeo
         title={post.frontmatter.title}
         description={post.frontmatter.description}
@@ -31,7 +37,10 @@ const BlogPostTemplate = ({
           description: post.frontmatter.description,
           images: [
             {
-              url: siteUrl+post.frontmatter.img.childImageSharp.gatsbyImageData.images.fallback.src,
+              url:
+                siteUrl +
+                post.frontmatter.img.childImageSharp.gatsbyImageData.images
+                  .fallback.src,
               width: 500,
               height: 500,
               alt: "WapPur",
@@ -46,7 +55,9 @@ const BlogPostTemplate = ({
         title={post.frontmatter.title}
         keywords={post.frontmatter.title}
         images={
-          siteUrl+post.frontmatter.img.childImageSharp.gatsbyImageData.images.fallback.src
+          siteUrl +
+          post.frontmatter.img.childImageSharp.gatsbyImageData.images.fallback
+            .src
         }
         datePublished={post.frontmatter.date}
         dateModified={post.frontmatter.date}
@@ -84,13 +95,12 @@ const BlogPostTemplate = ({
       </article>
       <AdsBot />
       <hr />
-      
+
       <div className="flex flex-row p-3 my-2 rounded-xl">
-        {
-          previous && !previous.fields.slug.match(/(\/)?page\/\S*/) && (
+        {previous && !previous.fields.slug.match(/(\/)?page\/\S*/) && (
           <div className="flex-1">
             <div className="inline-block text-base font-bold">
-            <span className="items-center text-[2em]">← </span>
+              <span className="items-center text-[2em]">← </span>
               <Link to={previous.fields.slug} rel="prev">
                 {previous.frontmatter.title}
               </Link>

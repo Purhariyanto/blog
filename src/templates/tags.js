@@ -24,7 +24,13 @@ const BlogIndex = ({ data, location, pageContext }) => {
   const posts = data.allMarkdownRemark.nodes
 
   return (
-    <Layout location={location} title={siteTitle} des={siteDes} menuTop={menuTop} menuBot={menuBot}>
+    <Layout
+      location={location}
+      title={siteTitle}
+      des={siteDes}
+      menuTop={menuTop}
+      menuBot={menuBot}
+    >
       <GatsbySeo
         title={tags}
         description={des}

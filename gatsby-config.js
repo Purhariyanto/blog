@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `WapPur`,
     description: `WapPur adalah blog yang membahas tentang kumpulan tutorial terupdate. WapPur menyajikan berbagai tutorial menarik yang dilengkapi dengan gambar.`,
-    siteUrl: `https://s.wappur.my.id`,
+    siteUrl: `https://wappur.my.id`,
     author: `WapPur`,
     imgLogo: `https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgPPVVmtvrZTeAv3BV0bxiE9c4rvA152HRF-KlobJKMMNyAIFNodcThulUCqMcUdDWYjnj5KSch8N0krj9VGGG4ApH3cL0Mmf-IoKpLiR7bZ9HS62nISaFzicDHrltNLdqIAzp_vxGg3k3PkKOW914KghsF0Ahi9KieXfKIL25G8t1-Pm87Iyv9xp3R6g/s1600/wappur.png`
   },
@@ -42,7 +42,13 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          `gatsby-remark-external-links`,
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank",
+              rel: null
+            }
+          },
           {
             resolve: `gatsby-remark-autolink-headers`,
             options: {

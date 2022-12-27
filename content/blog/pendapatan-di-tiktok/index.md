@@ -36,7 +36,7 @@ Melalui platform Kalkulator Uang Tiktok, juga dikenal sebagai _Money Calculator_
 
 1.  Siapkan browser di HP atau di PC Anda.
 
-2.  Setelah itu, buka halaman ini **https://exolyt.com/id/guides/tiktok-money-calculator**.
+2.  Setelah itu, buka halaman ini <a href="https://exolyt.com/id/guides/tiktok-money-calculator" target="_blank" rel="nofollow noopener noreferrer">Klik Disini</a>.
 
 3.  Setelah membuka Kalkulator Uang Tiktok, Anda harus memasukkan **Nama Pengguna** atau **Nama Akun** di kolom yang disediakan.
 

@@ -47,10 +47,15 @@ Sudah paham cara menghapus akun Google di Android, mungkin Anda juga ingin tahu 
 ## Cara menambah akun google di hp Xiaomi
 
 1.  Buka aplikasi **Gmail** di Android Anda.
+
 2.  Setelah itu pilih **ikon tiga strip** di pojok kiri atas.
+
 3.  Klik pada informasi _email_ yang menampilkan nama dan Alamat _email_ Anda.
+
 4.  Lalu pilih **_Add Account_**.
+
 5.  Pilih **Google**, lalu masukkan **_Email_** dan **Kata Sandi** dengan benar.
+
 6.  Akun Google berhasil ditambahkan.
 
 ## Penutup

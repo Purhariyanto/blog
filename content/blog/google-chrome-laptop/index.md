@@ -1,5 +1,5 @@
 ---
-title: Cara Install Google Chrome di Windows
+title: Cara Install Google Chrome di Laptop
 date: "2023-01-08 09:37:53"
 description: Artikel ini membahas cara install Google Chrome di Laptop, Setelah Anda selesai menginstal Google Chrome, Anda dapat mulai menggunakannya untuk menjelajahi web.
 img: ./1.png

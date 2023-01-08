@@ -4,3 +4,5 @@ Disallow: /404*
 Disallow: /p/*
 Disallow: /page/*
 
+Sitemap: https://wappur.my.id/sitemap-index.xml
+

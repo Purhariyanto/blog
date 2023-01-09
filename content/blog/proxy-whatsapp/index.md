@@ -1,6 +1,6 @@
 ---
 title: Bagaimana Cara Mengatur Fitur Proxy WhatsApp?
-date: "Mon 2023-01-09 09:06:00"
+date: "2023-01-09 09:06:00"
 description: Dalam artikel ini, kami akan menunjukkan kepada Anda cara mengatur fitur proxy WhatsApp. Setelah mengikuti ini, Anda dapat menggunakan WhatsApp dengan lancar.
 img: ./1.jpg
 tags: [Proxy,Tutorial,WhatsApp,WA,Fitur]

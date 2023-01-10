@@ -46,6 +46,11 @@ const BlogIndex = ({ data, location, pageContext }) => {
           ],
           site_name: author,
         }}
+        twitter={{
+        handle: '@handle',
+        site: '@site',
+        cardType: 'summary_large_image',
+      }}
       />
 
       {posts.map(post => {

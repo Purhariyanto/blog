@@ -1,5 +1,5 @@
 ---
-title: cara memulai Live di TikTok
+title: Cara Memulai Live di TikTok Untuk Pemula
 date: "2023-01-08 19:07:01"
 description: Dalam artikel ini, kami akan menunjukkan kepada Anda cara memulai Live di TikTok. Dengan mengikuti panduan ini, Anda dapat memulai Live di TikTok dengan mudah untuk meningkatkan jumlah pengikut dan interaksi dengan mereka.
 img: ./1.jpg

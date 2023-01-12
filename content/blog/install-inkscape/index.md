@@ -17,23 +17,23 @@ Inkscape adalah aplikasi open source yang digunakan untuk membuat dan mengedit g
 
 Pertama-tama, harus memastikan bahwa memiliki semua paket yang diperlukan untuk menginstal Inkscape. dapat mengeceknya dengan menjalankan perintah berikut di [terminal](https://wappur.my.id/tags/terminal/):
 
-    <code>sudo apt-get update</code>
+<code>sudo apt-get update</code>
 
 Kemudian, harus menambahkan repositori Inkscape ke sistem. dapat melakukannya dengan menjalankan perintah berikut di terminal:
 
-<code>sudo add-apt-repository ppa:inkscape.dev/stable</code>
+<code>sudo add-apt-repository ppa:inkscape.dev/stable </code>
 
 Setelah itu, harus memperbarui sistem dengan menjalankan perintah berikut di terminal:
 
-    <code>sudo apt-get update</code>
+<code>sudo apt-get update</code>
 
 Kemudian, dapat [menginstal](https://wappur.my.id/tags/install/) Inkscape dengan menjalankan perintah berikut di terminal:
 
-    <code>sudo apt-get install inkscape</code>
+<code>sudo apt-get install inkscape</code>
 
 Setelah proses instalasi selesai, dapat menjalankan Inkscape dengan menjalankan perintah berikut di terminal:
 
-    <code>inkscape</code>
+<code>inkscape</code>
 
 Ini akan membuka aplikasi Inkscape di jendela. dapat mulai menggunakannya untuk membuat dan mengedit grafik vektor.
 

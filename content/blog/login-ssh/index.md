@@ -14,7 +14,7 @@ Untuk login ke [server](https://wappur.my.id/tags/server/) melalui SSH, harus me
 
 Untuk login ke server melalui [terminal](https://wappur.my.id/tags/terminal/), harus mengetikkan perintah berikut:
 
-    ssh username@hostname
+    <code>ssh username@hostname</code>
 
 Di sini, username adalah nama pengguna akun SSH dan [hostname](https://wappur.my.id/tags/hostname/) adalah alamat IP atau nama [domain](https://wappur.my.id/tags/domain/) server. Setelah mengetikkan perintah ini, akan diminta untuk memasukkan kata sandi akun SSH. Jika memasukkan kata sandi yang benar, akan berhasil login ke server.
 

@@ -4,7 +4,7 @@ module.exports = {
     description: `WapPur adalah blog yang membahas tentang kumpulan tutorial terupdate. WapPur menyajikan berbagai tutorial menarik yang dilengkapi dengan gambar.`,
     siteUrl: `https://wappur.my.id`,
     author: `WapPur`,
-    imgLogo: `https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgPPVVmtvrZTeAv3BV0bxiE9c4rvA152HRF-KlobJKMMNyAIFNodcThulUCqMcUdDWYjnj5KSch8N0krj9VGGG4ApH3cL0Mmf-IoKpLiR7bZ9HS62nISaFzicDHrltNLdqIAzp_vxGg3k3PkKOW914KghsF0Ahi9KieXfKIL25G8t1-Pm87Iyv9xp3R6g/s1600/wappur.png`
+    imgLogo: `https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiFdo_RmeoRYzrLbNbojU8MtHngWfa4GJYyRFRnNTBbJeGl7xgPGXpYhjw0rF-eGQG-GomNkDAd9QpiK-eVcw1HxzdvVGFWAB1V7YmiaPSV9mxPE_TU8KuyAogf1eQPtgBxc2ETrmKjYRqS2Xmw4Kf2rqvtDjgtJnB3ovsQXWd7FZ52sHNEQsP2zKhkCg/s1600/Logo-1000.png`
   },
   plugins: [
     `gatsby-plugin-sharp`,

@@ -94,7 +94,8 @@ div.rounded-xl div ul li {
 
 code {
   color: #f14e32;
-  padding: 2px 6px;
+  padding: 4px 6px;
+  margin-bottom: 2em;
 }
 
 p img {

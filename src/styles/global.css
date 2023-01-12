@@ -96,6 +96,8 @@ code {
   color: #f14e32;
   padding: 4px 6px;
   margin-bottom: 2em;
+  background-color: #2F2B43;
+  font-weight: bold;
 }
 
 p img {

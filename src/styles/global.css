@@ -93,8 +93,8 @@ div.rounded-xl div ul li {
 }
 
 code {
-  color: #f14e32;
-  padding: 4px 6px;
+  color: white;
+  padding: .6em 1.5em;
   margin-bottom: 2em;
   background-color: #2F2B43;
   font-weight: bold;

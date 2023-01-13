@@ -10,6 +10,17 @@ export default function HTML(props) {
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="google-site-verification" content="wipQaIRQDrNEOP0FN7UWHGiqo9iQDqOHFg6_U1-Dgrk" />
         {props.headComponents}
+        <script
+        dangerouslySetInnerHTML={{
+          __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-FCJLCZFKB6');
+        `,
+        }}
+      />
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}

@@ -13,6 +13,19 @@ module.exports = {
     `gatsby-plugin-postcss`,
     `gatsby-plugin-next-seo`,
     {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          "G-FCJLCZFKB6",
+        ],
+        pluginConfig: {
+          head: false,
+          respectDNT: true,
+          exclude: ["/preview/**", "/do-not-track/me/too/"],
+        },
+      },
+    },
+    {
       resolve: 'gatsby-plugin-sitemap',
       options: {
         output: '/',

@@ -63,12 +63,6 @@ const BlogPostTemplate = ({
           </span>
         </div>
         <hr className="my-2 -mx-3 h-px bg-gray-200 border-0 dark:bg-gray-700" />
-        <div className="p-2 mb-6 rounded-xl">
-          <div
-            dangerouslySetInnerHTML={{ __html: post.tableOfContents ?? "" }}
-          />
-        </div>
-
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"

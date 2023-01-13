@@ -22,6 +22,10 @@ const Adsense = () => {
         gtScript.src = "https://www.googletagmanager.com/gtag/js?id=G-FCJLCZFKB6"
         gtScript.type = "text/javascript"
         headID.appendChild(gtScript)
+
+        const gtConfig = document.createElement("script")
+        gtConfig.text = `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-FCJLCZFKB6');`
+        headID.appendChild(gtConfig)
       }
     })
   }, [])

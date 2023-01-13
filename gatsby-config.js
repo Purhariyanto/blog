@@ -43,19 +43,6 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: "gatsby-remark-external-links",
-            options: {
-              target: "_blank",
-              rel: null
-            }
-          },
-          {
-            resolve: `gatsby-remark-autolink-headers`,
-            options: {
-              isIconAfterHeader: true
-            },
-          },
-          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 450,

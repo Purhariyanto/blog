@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { BlogPostJsonLd, GatsbySeo } from "gatsby-plugin-next-seo"
+import { GatsbySeo } from "gatsby-plugin-next-seo"
 import AdsBot from "../components/ads-bot"
 
 const BlogPostTemplate = ({
@@ -13,7 +13,6 @@ const BlogPostTemplate = ({
   const siteDes = site.siteMetadata?.description
   const siteUrl = site.siteMetadata?.siteUrl
   const author = site.siteMetadata?.author
-  const imgLogo = site.siteMetadata?.imgLogo
   const menuTop = site.siteMetadata?.menuTop
   const menuBot = site.siteMetadata?.menuBot
   const posts = p.nodes
@@ -48,28 +47,6 @@ const BlogPostTemplate = ({
           ],
           site_name: author,
         }}
-        twitter={{
-        handle: '@handle',
-        site: '@site',
-        cardType: 'summary_large_image',
-      }}
-      />
-
-      <BlogPostJsonLd
-        url={url}
-        title={post.frontmatter.title}
-        keywords={post.frontmatter.title}
-        images={
-          siteUrl +
-          post.frontmatter.img.childImageSharp.gatsbyImageData.images.fallback
-            .src
-        }
-        datePublished={post.frontmatter.date}
-        dateModified={post.frontmatter.date}
-        authorName={author}
-        publisherName={author}
-        publisherLogo={imgLogo}
-        description={post.frontmatter.description}
       />
       <hr className="mb-2 h-px bg-gray-200 border-0 dark:bg-gray-700" />
       <article
@@ -87,7 +64,6 @@ const BlogPostTemplate = ({
         </div>
         <hr className="my-2 -mx-3 h-px bg-gray-200 border-0 dark:bg-gray-700" />
         <div className="p-2 mb-6 rounded-xl">
-          <div className="text-xl font-bold text-gray-600">Daftar Isi</div>
           <div
             dangerouslySetInnerHTML={{ __html: post.tableOfContents ?? "" }}
           />

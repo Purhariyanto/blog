@@ -49,11 +49,6 @@ const BlogIndex = ({ data, location, pageContext }) => {
           ],
           site_name: { author },
         }}
-        twitter={{
-        handle: '@handle',
-        site: '@site',
-        cardType: 'summary_large_image',
-      }}
       />
       <h1 className="mx-4 text-2xl -mb-1">{tags}</h1>
       {posts.map(post => {

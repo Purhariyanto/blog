@@ -15,8 +15,7 @@ const BlogIndex = ({ data, location, pageContext }) => {
   const { currentPage, numPage } = pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numPage
-  const prevPage =
-    currentPage - 1 === 1 ? "/" : "/p/" + (currentPage - 1).toString()
+  const prevPage = currentPage - 1 === 1 ? "/" : "/p/" + (currentPage - 1).toString()
   const nextPage = "/p/" + (currentPage + 1).toString()
   const posts = data.allMarkdownRemark.nodes
 
@@ -46,11 +45,6 @@ const BlogIndex = ({ data, location, pageContext }) => {
           ],
           site_name: author,
         }}
-        twitter={{
-        handle: '@handle',
-        site: '@site',
-        cardType: 'summary_large_image',
-      }}
       />
 
       {posts.map(post => {

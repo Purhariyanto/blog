@@ -100,11 +100,6 @@ code {
   font-weight: bold;
 }
 
-p img {
-  border-radius: 1em;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
 iframe {
   width: 100%;
   border-radius: 2em;
@@ -113,8 +108,15 @@ iframe {
 .gatsby-resp-image-image {
   border-radius: 0.75rem;
   margin: 0 auto;
+  margin-bottom: 2em;
 }
 
 .gatsby-resp-image-background-image{
   margin-top:2em;
+}
+
+.img-200{
+  max-width: 200px;
+  margin: 0 auto;
+  margin-bottom: 2em;
 }

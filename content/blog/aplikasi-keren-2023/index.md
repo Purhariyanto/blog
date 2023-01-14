@@ -6,7 +6,7 @@ img: ./1.webp
 tags: [iOS,Android,Video,Foto,Aplikasi,Game]
 ---
 
-![Aplikasi Keren iOS dan Android](1.jpg)
+![Aplikasi Keren iOS dan Android](1.webp)
 
 Tahun 2023 telah tiba dan teknologi semakin berkembang. Dengan berbagai [aplikasi](https://wappur.my.id/tags/aplikasi/) yang tersedia, kita dapat menemukan berbagai aplikasi yang dapat membantu kita dalam berbagai hal. 
 

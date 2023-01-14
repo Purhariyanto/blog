@@ -2,27 +2,16 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { GatsbySeo } from "gatsby-plugin-next-seo"
+import Seo from "../components/seo"
 
-const BlogIndex = ({ data, location, pageContext }) => {
+const BlogIndex = ({ data, location, pageContext}) => {
   const siteTitle = data.site.siteMetadata?.title
   const siteDes = data.site.siteMetadata?.description
-  const siteUrl = data.site.siteMetadata?.siteUrl
-  const author = data.site.siteMetadata?.author
-  const imgLogo = data.site.siteMetadata?.imgLogo
   const menuTop = data.site.siteMetadata?.menuTop
   const menuBot = data.site.siteMetadata?.menuBot
-  const { tag } = pageContext
-  const tagUrl = (siteUrl + "tags/" + tag + "/").toLowerCase()
-  const tags = "Tutorial " + tag
-  const des =
-    "Selamat datang di halaman kategori " +
-    tag +
-    " yang membahas seputar tutorial " +
-    tag +
-    ", dengan menyajikan tutorial yang menarik serta ada gambarnya."
   const posts = data.allMarkdownRemark.nodes
-
+  const { tag } = pageContext
+  const tags = "Tutorial " + tag
   return (
     <Layout
       location={location}
@@ -31,25 +20,6 @@ const BlogIndex = ({ data, location, pageContext }) => {
       menuTop={menuTop}
       menuBot={menuBot}
     >
-      <GatsbySeo
-        title={tags}
-        description={des}
-        canonical={tagUrl}
-        openGraph={{
-          url: { tagUrl },
-          title: { tags },
-          description: { des },
-          images: [
-            {
-              url: imgLogo,
-              width: 500,
-              height: 500,
-              alt: "WapPur",
-            },
-          ],
-          site_name: { author },
-        }}
-      />
       <h1 className="mx-4 text-2xl -mb-1">{tags}</h1>
       {posts.map(post => {
         const { title, date, img } = post.frontmatter
@@ -99,6 +69,25 @@ const BlogIndex = ({ data, location, pageContext }) => {
         )
       })}
     </Layout>
+  )
+}
+
+export const Head = ({ data: { site , allMarkdownRemark: post}, pageContext }) => {
+  const siteUrl = site.siteMetadata?.siteUrl
+  const { tag } = pageContext
+  const tagUrl = (siteUrl + "tags/" + tag + "/").toLowerCase()
+  const tags = "Tutorial " + tag
+  const des ="Selamat datang di halaman kategori " + tag + " yang membahas seputar " + tag + ", dengan menyajikan informasi yang menarik serta ada gambarnya."
+  const image = siteUrl + post.nodes[0].frontmatter.img.childImageSharp.gatsbyImageData.images.fallback.src
+  
+  return (
+    <Seo
+    title={tags}
+    description={des}
+    imageUrl={image}
+    url={tagUrl}
+    type="website"
+    />
   )
 }
 

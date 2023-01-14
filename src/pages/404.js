@@ -1,6 +1,5 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-import { GatsbySeo } from "gatsby-plugin-next-seo"
 
 import Layout from "../components/layout"
 
@@ -10,7 +9,6 @@ const NotFoundPage = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle} des={siteDes}>
-      <GatsbySeo noindex={true} />
       <hr />
       <div className="text-center m-14">
         <h1>404: Not Found</h1>

@@ -24,6 +24,6 @@ AppImage adalah format yang memperkenankan pengembang aplikasi untuk memaketkan 
 
 ## Video Menjalankan File AppImage Linux
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/WFL1OBk1DWE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Itulah tentang Cara Install File AppImage di Linux Ubuntu. Sampai jumpa di tutorial selanjutnya.

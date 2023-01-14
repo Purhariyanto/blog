@@ -2,14 +2,11 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { GatsbySeo } from "gatsby-plugin-next-seo"
+import Seo from "../components/seo"
 
 const BlogIndex = ({ data, location, pageContext }) => {
   const siteTitle = data.site.siteMetadata?.title
   const siteDes = data.site.siteMetadata?.description
-  const siteUrl = data.site.siteMetadata?.siteUrl
-  const author = data.site.siteMetadata?.author
-  const imgLogo = data.site.siteMetadata?.imgLogo
   const menuTop = data.site.siteMetadata?.menuTop
   const menuBot = data.site.siteMetadata?.menuBot
   const { currentPage, numPage } = pageContext
@@ -27,26 +24,7 @@ const BlogIndex = ({ data, location, pageContext }) => {
       menuTop={menuTop}
       menuBot={menuBot}
     >
-      <GatsbySeo
-        title={siteTitle}
-        description={siteDes}
-        canonical={siteUrl}
-        openGraph={{
-          url: siteUrl,
-          title: siteTitle,
-          description: siteDes,
-          images: [
-            {
-              url: imgLogo,
-              width: 500,
-              height: 500,
-              alt: "WapPur",
-            },
-          ],
-          site_name: author,
-        }}
-      />
-
+    
       {posts.map(post => {
         const { title, date, img, tags } = post.frontmatter
         const image = img.childImageSharp.gatsbyImageData
@@ -116,6 +94,18 @@ const BlogIndex = ({ data, location, pageContext }) => {
         )}
       </div>
     </Layout>
+  )
+}
+
+export const Head = ({ data: { site } }) => {
+  return (
+    <Seo
+    title={site.siteMetadata?.title}
+    description={site.siteMetadata?.description}
+    imageUrl={site.siteMetadata?.imgLogo}
+    url={site.siteMetadata?.siteUrl}
+    type="website"
+    />
   )
 }
 

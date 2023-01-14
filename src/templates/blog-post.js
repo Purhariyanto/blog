@@ -2,23 +2,21 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { GatsbySeo } from "gatsby-plugin-next-seo"
 import AdsBot from "../components/ads-bot"
+import Seo from "../components/seo"
 
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post, allMarkdownRemark: p },
-  location,
+  location
 }) => {
   const siteTitle = site.siteMetadata?.title
   const siteDes = site.siteMetadata?.description
-  const siteUrl = site.siteMetadata?.siteUrl
-  const author = site.siteMetadata?.author
   const menuTop = site.siteMetadata?.menuTop
   const menuBot = site.siteMetadata?.menuBot
   const posts = p.nodes
-  const url = siteUrl + post.fields.slug
 
   return (
+
     <Layout
       location={location}
       title={siteTitle}
@@ -26,36 +24,13 @@ const BlogPostTemplate = ({
       menuTop={menuTop}
       menuBot={menuBot}
     >
-      <GatsbySeo
-        title={post.frontmatter.title}
-        description={post.frontmatter.description}
-        canonical={url}
-        openGraph={{
-          url: url,
-          title: post.frontmatter.title,
-          description: post.frontmatter.description,
-          images: [
-            {
-              url:
-                siteUrl +
-                post.frontmatter.img.childImageSharp.gatsbyImageData.images
-                  .fallback.src,
-              width: 500,
-              height: 500,
-              alt: "WapPur",
-            },
-          ],
-          site_name: author,
-        }}
-      />
+
       <hr className="mb-2 h-px bg-gray-200 border-0 dark:bg-gray-700" />
       <article
         className="w-full p-3"
-        itemScope
-        itemType="http://schema.org/Article"
       >
         <div className="text-center">
-          <h1 className="text-2xl text-gray-700 font-bold" itemProp="headline">
+          <h1 className="text-2xl text-gray-700 font-bold">
             {post.frontmatter.title}
           </h1>
           <span className="mt-3 text-sm text-gray-700">
@@ -63,9 +38,14 @@ const BlogPostTemplate = ({
           </span>
         </div>
         <hr className="my-2 -mx-3 h-px bg-gray-200 border-0 dark:bg-gray-700" />
+        <div className="p-2 mb-6">
+          <div className="text-xl text-gray-700 mb-3">Daftar Isi</div>
+          <div
+            dangerouslySetInnerHTML={{ __html: post.tableOfContents ?? "" }}
+          />
+        </div>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
         />
       </article>
       <AdsBot />
@@ -102,8 +82,6 @@ const BlogPostTemplate = ({
           <section
             className="bg-white"
             key={post.fields.slug}
-            itemScope
-            itemType="http://schema.org/Article"
           >
             <div className="mx-auto">
               <div className="flex shadow-md hover:shadow-lg border border-gray-100 p-3 rounded-xl mt-3 mx-2">
@@ -116,10 +94,9 @@ const BlogPostTemplate = ({
                 </div>
                 <div className="flex w-9/12 ">
                   <div className="mx-5 my-auto">
-                    <Link to={post.fields.slug} itemProp="url">
+                    <Link to={post.fields.slug}>
                       <span
                         className="text-lg font-semibold  text-gray-800"
-                        itemProp="headline"
                       >
                         {title}
                       </span>
@@ -132,6 +109,23 @@ const BlogPostTemplate = ({
         )
       })}
     </Layout>
+  )
+}
+
+export const Head = ({ data: { site, markdownRemark: post } }) => {
+  const siteUrl = site.siteMetadata?.siteUrl
+  const url = siteUrl + post.fields.slug
+  const image = siteUrl + post.frontmatter.img.childImageSharp.gatsbyImageData.images.fallback.src
+  const datePub = post.frontmatter.datePub
+  return (
+    <Seo
+    title={post.frontmatter.title}
+    description={post.frontmatter.description}
+    imageUrl={image}
+    url={url}
+    type="article"
+    datePub={datePub}
+    />
   )
 }
 
@@ -178,6 +172,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "DD-MM-YYYY")
+        datePub: date(formatString: "YYYY-MM-DD[T]HH:mm:ss.SSS[Z]")
         description
         img {
           childImageSharp {

@@ -36,7 +36,8 @@ const Seo = ({ description, title, imageUrl, url, type, datePub, children }) => 
     'dateModified': `${datePub}`,
     'author': {
         '@type': 'Person',
-        'name': `${site.siteMetadata.author}`
+        'name': `${site.siteMetadata.author}`,
+        'url': `${site.siteMetadata.siteUrl}`
     },
     'publisher' : {
         '@type': 'Organization',
@@ -61,6 +62,7 @@ const Seo = ({ description, title, imageUrl, url, type, datePub, children }) => 
         <meta property="og:type" content={type} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@WapPur" />
+        <meta name="twitter:url" content={url} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={imageUrl} />

@@ -77,6 +77,10 @@ ol {
   margin: 0.5em 1em 2em 1em;
 }
 
+div > ul > li {
+  margin-bottom: 1em;
+}
+
 ul li {
   list-style-type: disc;
   word-wrap: break-word;
@@ -117,6 +121,18 @@ iframe {
 
 .img-200{
   max-width: 200px;
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+
+.img-300{
+  max-width: 300px;
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+
+.img-400{
+  max-width: 400px;
   margin: 0 auto;
   margin-bottom: 2em;
 }

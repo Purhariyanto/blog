@@ -30,6 +30,9 @@ Setelah itu, harus memperbarui sistem dengan menjalankan perintah berikut di ter
 Kemudian, dapat [menginstal](https://wappur.my.id/tags/install/) Inkscape dengan menjalankan perintah berikut di terminal:
 
 <code>sudo apt-get install inkscape</code>
+```javascript
+sudo apt-get install inkscape
+```
 
 Setelah proses instalasi selesai, dapat menjalankan Inkscape dengan menjalankan perintah berikut di terminal:
 
